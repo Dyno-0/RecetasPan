@@ -1,0 +1,129 @@
+/*
+ * Copyright (C) 2018 Jorge Vila
+
+ * Este programa es software libre: puede redistribuirlo y/o modificarlo bajo
+ * los términos de la Licencia General Pública de GNU publicada por la Free
+ * Software Foundation, ya sea la versión 3 de la Licencia, o (a su elección)
+ * cualquier versión posterior.
+ *
+ * Este programa se distribuye con la esperanza de que sea útil pero SIN
+ * NINGUNA GARANTÍA; incluso sin la garantía implícita de MERCANTIBILIDAD o
+ * CALIFICADA PARA UN PROPÓSITO EN PARTICULAR. Vea la Licencia General Pública
+ * de GNU para más detalles.
+ *
+ * Usted ha debido de recibir una copia de la Licencia General Pública
+ * de GNU junto con este programa. Si no, vea <http://www.gnu.org/licenses/>.
+ */
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: 'NotoSans';
+    src: url('NotoSans-Regular.ttf');
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                 /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:white;
+    font-family:'NotoSans';
+    font-size:22px;
+    color: black;
+    height:100%;
+    margin:0;
+    padding:50px 0 0 0;
+    width:100%;
+}
+
+header {
+    height: 40px;
+    width: 98%;
+    background-color:cornflowerblue;
+    position: fixed;
+    color: white;
+    font-size: 28px;
+    position: fixed;
+    top:0;
+    padding:5px;
+    margin-right: 25px;
+}
+
+#icono-programa {
+    float: left;
+}
+
+#titulo {
+    float: left;
+}
+
+#boton-ayuda {
+    float: right;
+}
+
+#boton-agregar {
+    float: right;
+}
+
+#agregar {
+    width:40px;
+    height:40px;
+    background-color:cornflowerblue;
+    margin: 0px;
+    padding:0px;
+    border: 0;
+    font-size:28px;
+    line-height:32px;
+    color:white;
+}
+
+#ayuda {
+    width:40px;
+    height:40px;
+    background-color:cornflowerblue;
+    margin: 0px;
+    padding:0px;
+    border: 0;
+    font-size:28px;
+    line-height:32px;
+    color:white;
+}
+
+.clear {
+	clear: both;
+}
+
+#seleccion {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    top: 50px;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    background-color: white;
+    padding: 45px 0 0 0;
+}
+
+li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 40px;
+    border-bottom: solid 1px lightgray;
+    font-size: 22px;
+}
+
+section {
+    height:100%;
+    width:95%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
