@@ -23,7 +23,7 @@ if ('addEventListener' in document) {
         cargarRecetas();
         escucharBotonCrear();
         escucharAyuda();
-        borrarTodo();
+//        borrarTodo();
     }, false);
 }
 
