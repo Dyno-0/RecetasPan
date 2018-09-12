@@ -33,6 +33,7 @@ if ('addEventListener' in document) {
         cargarIngredientes();
         anadirIngrediente();
         volverAtras();
+        escucharAyuda();
     });
 }
 
@@ -96,6 +97,8 @@ function modificarPeso() {
 /*Con esta función cargamos los ingredientes guardados en el array Ingredientes dentro de la receta cargada*/
 function cargarIngredientes() {
     var totalPorcentaje = calcularPorcentajes();
+    ordenarIngredientes();
+    localStorage.setItem('recetas', JSON.stringify(listadoRecetas));    
     for(var i = 0; i < listadoRecetas[numReceta].ingredientes.length; i++) {
         var pesoIngrediente = Math.round((listadoRecetas[numReceta].ingredientes[i][1] * listadoRecetas[numReceta].peso) / totalPorcentaje);
         document.querySelector('#lista-ingredientes').insertAdjacentHTML('beforeend', '<li class="lista-ingredientes"><span id="cargar' + i + '">' + listadoRecetas[numReceta].ingredientes[i][0] + ' <span id="porcentaje">' + listadoRecetas[numReceta].ingredientes[i][1] + '% ' + '</span></span><span style="float:right" id="peso-ingrediente' + i + '">' + pesoIngrediente + ' gr</span></li>');
@@ -232,6 +235,13 @@ function escucharIngrediente(num){
     });
 }
 
+
+/*Con esta función ponemos en escucha la pulsación del botón de ayuda.*/
+function escucharAyuda() {
+    document.querySelector('#ayuda').addEventListener('click', function() {
+        alert('En esta página podrás cambiar el nombre de la receta pulsando encima del título.\r Podrás añadir nuevos ingredientes pulsado el icono del "+". Además podrás modificar el nombre y/o porcentaje de un ingrediente haciendo una pulsación sencilla encima del nombre del ingrediente. También podrás borrar un ingrediente dejando pulsado en el nombre del ingrediente.\rPulsando encima el peso total del pan, podrás cambiar dicho peso. Todos los ingredientes se recalculan automáticamente. También puedes cambiar el peso de un ingrediente concreto pulsando encima del peso de dicho ingrediente. Toda la receta se recalcula en función de los porcentajes de cada ingrediente y respetando el peso del ingrediente que quieres que quede inalterado.');
+    });
+}
 
 /*Con esta función volvemos a la página principal*/
 function volverAtras(){

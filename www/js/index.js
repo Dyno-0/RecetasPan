@@ -23,7 +23,7 @@ if ('addEventListener' in document) {
         cargarRecetas();
         escucharBotonCrear();
         escucharAyuda();
-//        borrarTodo();
+        borrarTodo();
     }, false);
 }
 
@@ -85,7 +85,7 @@ function escucharLista(num){
 /*Con esta función ponemos en escucha la pulsación del botón de crear nueva receta.*/
 function escucharBotonCrear() {
     document.querySelector('#boton-agregar').addEventListener('click', function(){
-        var nombre = prompt("Introduce el nombre de la receta. Se creará una nueva receta con unos ingredientes básicos. Podrás consultar, modificar y/o borrar cada una de ellas pulsando encima.");
+        var nombre = prompt("Introduce el nombre de la receta.");
         if (nombre !=='' && nombre !== null) {
             crearReceta(nombre);
         }
@@ -118,16 +118,17 @@ function borrarListaRecetas() {
 }
 
 
+/*Con esta función ponemos en escucha la pulsación del botón de ayuda.*/
 function escucharAyuda() {
     document.querySelector('#ayuda').addEventListener('click', function() {
-        alert('Esta es la ayuda del programa');
+        alert('En esta página podrás crear nuevas recetas pulsado el icono del "+". Se creará una receta con unos ingredietes básicos. Podrás consultar y/o modificar tanto el nombre como cada uno de sus ingredientes, haciendo una pulsación sencilla encima del nombre. Por último, podrás borrar una receta dejando pulsado en el nombre de la receta que quieras borrar.');
     });
 }
 
-/*
+
 function borrarTodo() {
     document.querySelector('#borrar').addEventListener('click', function(){
         localStorage.clear();
         cargarRecetas();
     })
-}*/
+}

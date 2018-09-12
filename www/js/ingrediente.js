@@ -54,17 +54,28 @@ function aceptarCambios(){
     document.querySelector('#boton-aceptar').addEventListener('click', function() {
         var nuevoNombre = document.querySelector('#nombre-ingrediente').value;
         var nuevoPorcentaje = document.querySelector('#porcentaje-ingrediente').value;
+        nuevoPorcentaje = parseInt(nuevoPorcentaje);
         if(nuevoNombre !== null && nuevoNombre !== '') {
             listadoRecetas[numReceta].ingredientes[numIngrediente][0] = nuevoNombre;
             localStorage.setItem('recetas', JSON.stringify(listadoRecetas));
         }
         if (nuevoPorcentaje !== '') {
+            ordenarIngredientes();
             listadoRecetas[numReceta].ingredientes[numIngrediente][1] = nuevoPorcentaje;
             localStorage.setItem('recetas', JSON.stringify(listadoRecetas));
         }
         history.go(-1);
     });
 }
+
+
+/*Con esta función ordenamos los ingredientes por el % de mayor a menor.*/
+function ordenarIngredientes() {
+    listadoRecetas[numReceta].ingredientes.sort(function(a,b){
+        return a[1] < b[1]; // orden descendente por los valores;
+    });
+}
+
 
 /*Con esta función volvemos a la página de ingredientes*/
 function volverAtras(){

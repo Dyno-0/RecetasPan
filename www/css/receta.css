@@ -60,6 +60,10 @@ header {
     float: left;
 }
 
+#boton-ayuda {
+    float: right;
+}
+
 #boton-agregar {
     float: right;
 }
@@ -69,6 +73,18 @@ header {
 }
 
 #atras {
+    width:40px;
+    height:40px;
+    background-color:cornflowerblue;
+    margin: 0px;
+    padding:0px;
+    border: 0;
+    font-size:28px;
+    line-height:32px;
+    color:white;
+}
+
+#ayuda {
     width:40px;
     height:40px;
     background-color:cornflowerblue;
