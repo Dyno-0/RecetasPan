@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+Copyright (C) 2018 Jorge Vila
+
+Este programa es software libre: puede redistribuirlo y/o modificarlo bajo
+los términos de la Licencia General Pública de GNU publicada por la Free
+Software Foundation, ya sea la versión 3 de la Licencia, o (a su elección)
+cualquier versión posterior.
+
+Este programa se distribuye con la esperanza de que sea útil pero SIN
+NINGUNA GARANTÍA; incluso sin la garantía implícita de MERCANTIBILIDAD o
+CALIFICADA PARA UN PROPÓSITO EN PARTICULAR. Vea la Licencia General Pública
+de GNU para más detalles.
+
+Usted ha debido de recibir una copia de la Licencia General Pública
+de GNU junto con este programa. Si no, vea <http://www.gnu.org/licenses/>.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/fastclick.js"></script>
+        <script type="text/javascript" src="js/hammer.min.js"></script>
+
+        <title>Recetas y calculadora para hacer pan</title>
+
+    </head>
+    <body>
+        <header>
+            <div id='titulo'>
+                <p>Recetas de pan</p>
+            </div>
+            <div id='boton-ayuda'>
+                <button id='ayuda'>?</button>
+            </div>
+            <div id='boton-agregar'>
+                <button id="agregar">+</button>
+            </div>
+    
+            <div class='clear'></div>
+        </header>
+
+        <section>
+            <div id='seleccion'>
+                <p>Selecciona una receta de la lista</p><br>
+            </div>
+            
+            <ul id="lista-recetas"></ul>
+        </section>
+<!--         <div id='boton-borrar'>
+                <button id="borrar">Borrar todo</button>
+        </div> -->
+    </body>
+</html>
