@@ -141,7 +141,7 @@ function anadirIngrediente() {
             cargarIngredientes();
         }
         else if (nuevoIngrediente.length > 15) {
-        			alert("Máximo 15 caracteres");
+        		alert("Máximo 15 caracteres");
         }
         else {
             var nuevoPorcentaje = prompt('Porcentaje del nuevo ingrediente');
